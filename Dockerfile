@@ -11,3 +11,5 @@ COPY . .
 RUN npm run build
 
 CMD ["npm", "run", "start:prod"]
+
+EXPOSE 3000
