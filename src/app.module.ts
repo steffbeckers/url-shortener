@@ -5,7 +5,9 @@ import { UrlsModule } from './urls/urls.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://localhost/url-shortener'),
+    MongooseModule.forRoot(
+      process.env.MONGODB_URI || 'mongodb://localhost/url-shortener',
+    ),
     UrlsModule,
   ],
   controllers: [],
